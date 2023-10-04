@@ -1,6 +1,6 @@
 Regular **Markdown** here.
 
-<div hidden>
+<!--
     
 @startuml DiagramOne
 
@@ -9,13 +9,13 @@ Bob -> Alice: Hi!
 
 @enduml
     
-</div>
+-->
 
 ![](DiagramOne.svg)
 
 More regular **Markdown** here.
 
-<div hidden>
+<!--
     
 @startuml DiagramOtherName
 
@@ -24,7 +24,7 @@ Bob -> Alice: Hi!
 
 @enduml
     
-</div>
+-->
 
 ![](DiagramOtherName.svg)
 
