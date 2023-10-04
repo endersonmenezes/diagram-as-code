@@ -19,13 +19,13 @@ i=1
 while IFS= read -r LINE
 do
     # If start of UML diagram
-    if [[ "$LINE" == *@startuml* ]]; then
+    if [[ "$LINE" == *@start* ]]; then
         echo "$LINE" > $TEMP_FILE
         INSIDE_DIAGRAM=true
         DIAGRAM_NAME=$(echo "$LINE" | cut -d' ' -f2)
         echo "Generating $DIAGRAM_NAME..."
     # If end of UML diagram
-    elif [[ "$LINE" == *@enduml* ]]; then
+    elif [[ "$LINE" == *@end* ]]; then
         echo "$LINE" >> $TEMP_FILE
         INSIDE_DIAGRAM=false
         # Generate SVG
@@ -37,4 +37,4 @@ do
     fi
 done < "$FILENAME"
 
-rm $temp_file
+rm $TEMP_FILE

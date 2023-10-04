@@ -17,14 +17,23 @@ More regular **Markdown** here.
 
 <!--
     
-@startuml DiagramOtherName
-
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-
-@enduml
+@startyaml DiagramOtherName
+fruit: Apple
+size: Large
+color: 
+  - Red
+  - Green
+@endyaml
     
 -->
+
+```yaml
+fruit: Apple
+size: Large
+color: 
+  - Red
+  - Green
+```
 
 ![](DiagramOtherName.svg)
 
